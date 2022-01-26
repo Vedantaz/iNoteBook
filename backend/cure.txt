@@ -1,0 +1,23 @@
+npm i -D nodemon > to take it as devdep3endencies in package.json .
+nodemon .\index.js > 
+
+
+Error: Cannot find module 'mongoose'
+Require stack:
+- C:\Users\mulev\Desktop\Custom OfficeWorks\designer_Way\iNotebook_RP\backend\db.js
+- C:\Users\mulev\Desktop\Custom OfficeWorks\designer_Way\iNotebook_RP\backend\index.js
+soln : 
+run these commands , actually problem arising due to  mongoose module is not there in package.json
+npm install mongoose -g 
+npm install mongoose --save
+: after that it will run smoothly .
+
+
+TypeError: Router.use() requires a middleware function but got a Object
+soln : 
+
+    commented  / app.use('/api/notes', require('./routes/notes')) because their , routes is not created 
+    then we write module.exports  = router `
+
+    Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    soln : you can only send res.send() only one time . 
