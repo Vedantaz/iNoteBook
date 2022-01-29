@@ -1,7 +1,6 @@
 npm i -D nodemon > to take it as devdep3endencies in package.json .
 nodemon .\index.js > 
 
-
 Error: Cannot find module 'mongoose'
 Require stack:
 - C:\Users\mulev\Desktop\Custom OfficeWorks\designer_Way\iNotebook_RP\backend\db.js
@@ -12,7 +11,6 @@ npm install mongoose -g
 npm install mongoose --save
 : after that it will run smoothly .
 
-
 TypeError: Router.use() requires a middleware function but got a Object
 soln : 
 
@@ -21,3 +19,15 @@ soln :
 
     Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
     soln : you can only send res.send() only one time . 
+
+    For password, hash, salt, peper >  security features of the password.
+    learn about > aync and await.
+if Internal server errror / 500 error is arrived then  > 
+check and write your password in ethical way >  don't use , space , ', " elsse senseless things.
+here   if (!user) {
+            ^^
+SyntaxError: Unexpected token 'if':
+soln >: see the correct patrs of curly brackets and parenthesis.
+if your thunderClient and serror : 
+without any reason you can;'t use it.: 
+soln: just check the spellings of all the parameters given in the Headers and Body.
