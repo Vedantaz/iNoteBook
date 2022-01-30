@@ -1,0 +1,26 @@
+Heyyy starting it ....
+1. error : export 'Switch' (imported as 'Switch') was not found in 'react-router-dom':
+soln :   
+If you using newer version of react-router-dom (ex. ^6.2.1 in my case) you should change <Switch> to <Routes> and use <Route> with component={<SampleComponent />} parameter.
+
+2. error : 
+Error: error:0308010C:digital envelope routines::unsupported
+soln :
+
+# Some top answers did not work.
+# export NODE_OPTIONS=--openssl-legacy-provider
+  And some top answers were not applicable, modifying package.json file:
+
+# "start": "react-scripts --openssl-legacy-provider start"
+  This is caused by the latest node.js V17 compatible issues with OpenSSL, see this and this issue on GitHub.
+
+# 
+To fix the dependency tree, try following the steps below in the exact order:
+
+  1. Delete package-lock.json (not package.json!) and/or yarn.lock in your project folder.
+  2. Delete node_modules in your project folder.
+  3. Remove "babel-jest" from dependencies and/or devDependencies in the package.json file in your project folder.
+  4. Run npm install or yarn, depending on the package manager you use.
+# 
+If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+That would permanently disable this preflight check in case you want to proceed anyway.
