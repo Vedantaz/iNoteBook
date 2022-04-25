@@ -1,24 +1,24 @@
 Advantage of nodemon using>>
-node index.js can be also written but , using the nodemon > we can directly use node index.js  command just by saving the file .
+node index.js can be also written but , using the nodemon > we can directly use node index.js command just by saving the file .
 
-mongo : a command line tool sstarted 
+mongo : a command line tool started 
 mongod: an command to start and utilised mongo 
 it is based on bson (more efficient than json) , similar to json ,
 mongoose: abstraction layer on top of mongoDB
-our connection string : mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
+our connection string : mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false.
 
 error: 
  # ReferenceError: Cannot access 'mongoose' before initialization
  # SyntaxError: Cannot use import statement outside a module
 soln : 😂😂🤣 just we change the lines we should wriite :
 const mongoose = require("mongoose");
-then we shou;d write > const { Schema } = mongoose;
+then we should write > const { Schema } = mongoose;
 but we just exchange thew serial no. pof lines .. thats why that error is coming .
 
 MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
 MongooseError: Operation `users.createIndex()` buffering timed out after 10000ms
 soln :
-here we had created mongoose.conect function but unfortunately giving an error of  mongodb.insertOne() buffered timed out. 
+here we had created mongoose.connect function but unfortunately giving an error of  mongodb.insertOne() buffered timed out. 
 then we created catch and then function but now it is giving an error : MongooseServerSelectionError: connect ECONNREFUSED ::1:27017
 Now we are creating the database using powershell or we can use cmd also .
 
@@ -26,8 +26,7 @@ Now we are creating the database using powershell or we can use cmd also .
  CURED THE ERROR : simply by writing mongodb://127.0.0.1/inotebook   over mongodb://localhost:27017/inotebook
 serarching the soln very days gone ,,, but searching still on 
 
-
-## if you can't see the database ceated in the powershell or else things 
+## if you can't see the database created in the powershell or else things 
 soln :minm 1 collection should be there in the database .
 
 collections > documents > rows in database

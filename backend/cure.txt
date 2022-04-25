@@ -1,7 +1,8 @@
 npm i -D nodemon > to take it as devdep3endencies in package.json .
 nodemon .\index.js > 
+npm install express-validator
 
-Error: Cannot find module 'mongoose'
+1. Error: Cannot find module 'mongoose'
 Require stack:
 - C:\Users\mulev\Desktop\Custom OfficeWorks\designer_Way\iNotebook_RP\backend\db.js
 - C:\Users\mulev\Desktop\Custom OfficeWorks\designer_Way\iNotebook_RP\backend\index.js
@@ -11,7 +12,7 @@ npm install mongoose -g
 npm install mongoose --save
 : after that it will run smoothly .
 
-TypeError: Router.use() requires a middleware function but got a Object
+2. TypeError: Router.use() requires a middleware function but got a Object
 soln : 
 
     commented  / app.use('/api/notes', require('./routes/notes')) because their , routes is not created 
@@ -22,12 +23,20 @@ soln :
 
     For password, hash, salt, peper >  security features of the password.
     learn about > aync and await.
-if Internal server errror / 500 error is arrived then  > 
-check and write your password in ethical way >  don't use , space , ', " elsse senseless things.
+3. if Internal server errror / 500 error is arrived then  > 
+check and write your password in ethical way >  don't use , space , ', " else senseless things.
 here   if (!user) {
             ^^
-SyntaxError: Unexpected token 'if':
-soln >: see the correct patrs of curly brackets and parenthesis.
+4. SyntaxError: Unexpected token 'if':
+soln >: see the correct parts of curly brackets and parenthesis.
 if your thunderClient and serror : 
 without any reason you can;'t use it.: 
 soln: just check the spellings of all the parameters given in the Headers and Body.
+
+
+5. Error >  when working with frontend , I'm trying to fetch notes from my databse and localhost 300 is on , Im trying to resolve the isue , but cn;t .....
+soln : Well the isuue , is so simple I dont start the datbase server with nodemon . index.js😂😁😀🤣🤣😂😎  
+
+# If error comes like an html file comes with eror > it is maybe the request sending related erorr .. check it out 
+                                                  > And check each spelling in the url.  
+

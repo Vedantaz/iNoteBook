@@ -18,6 +18,7 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
+
 });
 const user = mongoose.model('user', UserSchema)
 user.createIndexes();

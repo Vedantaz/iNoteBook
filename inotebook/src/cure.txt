@@ -24,3 +24,64 @@ To fix the dependency tree, try following the steps below in the exact order:
 # 
 If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
 That would permanently disable this preflight check in case you want to proceed anyway.
+
+# src\context\notes\notesState.js
+  Line 4:37:  Parsing error: JSX attributes must only be assigned a non-empty expression.
+
+  All these state that,, in context provider , : value must get an object to drive .
+  write value = {{}}, Don't write : value = {}
+# error :
+reload error of unresponsive error |: 
+  Uncaught ReferenceError: process is not defined:
+#  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "devDependencies": {
+    "react-error-overlay": "6.0.9"
+  }
+
+  >> firsty used auth-token : 
+  for upadting the note : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEzMWRjNWUzZTQwMzdjZDQ3MzRhMDY2In0sImlhdCI6MTYzMDY2OTU5Nn0.hJS0hx6I7ROugkqjL2CjrJuefA3pJi-IU5yGUbRHI4Q 
+
+  for create/ add , delete , : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFmMmJjNWQzNzVlOTU1YTg5ZmZkN2FhIn0sImlhdCI6MTY0MzM0NTIxMH0.o0AMlGiPvOLX0WbmEqD_rOUcGGYALnV0fvO5G9vbah0
+ 
+ solved the rror of not connectin with delete, add, update and getNotes..
+ try to see evry connecting code and especially spelloin of each :
+ 1. In add > I not kept it PUT method , instaed I wrote OPST , > reson foir not working  or showing 404, 401 and 500 error.
+
+ 2. delete > Check the auth-token spelling correctly, and auth-token value is correct or not . 
+ then I not done to setNotes in add, thtas's why it;s not getting I think. > reson for error.
+ 
+ 3. update > here the update function in notes.js, noteitem.js and notestate.js is written wrong, 
+ i.e it's spelling is wrong , updatenote is given , but updateNote we want. 
+
+ ######## THAT PARTICULAR CAST OBJECTID FAILED ERROR :
+  Is due to culprit const note ={} in the noTESTATE UPTO VIDEO NO. 68
+  we have to delete it and write const note =- json , we got from generating the
+  dynamic note. 
+
+  # Some-how don't know but login and sign-up page is not working , but code is correct / every thing is correct. > 
+   Just error : is when i wrote e.preventDefault() ; code then I don't write the e argument in the function ....😂😂😂  
+
+  error: 
+# Uncaught TypeError: react__WEBPACK_IMPORTED_MODULE_9___default is not a function or its return value is not iterable
+soln:
+    This is because useState is not the default export from the react package.
+    To import specific modules from a package you should use the curly brace syntax. Try using import { useState } from 'react';
+
+
+     "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFmMmJjNWQzNzVlOTU1YTg5ZmZkN2FhIn0sImlhdCI6MTY0MzM0NTIxMH0.o0AMlGiPvOLX0WbmEqD_rOUcGGYALnV0fvO5G9vbah0"
+
+
+4. Basic if want to start the UI and backend > 
+   UI -|> start it by npm run start
+   backend -|> To connect with database > nodemon { main.js file }
+  
+5. The pattern attribute is an attribute of the text, tel, email, url, password, and search input types.
+
+The pattern attribute, when specified, is a regular expression which the input's value must match in order for the value to pass constraint validation.
+[a-z]{3} > means that all lowercase letters in length 3 , can make groups numnbres in these formats...
+[a-z]{4,9} > 4 to 9 length of lowercase letters.
